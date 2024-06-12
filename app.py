@@ -55,15 +55,15 @@ safety_settings = {
 st.set_page_config(page_title="👴🏻SengoBot👵🏻")
 st.logo("SMART_logo.jpg", icon_image="SMART_logo.jpg")
 st.image("SMART_logo.jpg", width=80)
-st.title("🧓👩‍🦳 Elderly Companion Bot")
+st.title("🧓👩‍🦳 老友聊天機械人")
 
 def reset_chat():
-    st.session_state["messages"] = [{"role": "assistant", "content": "Hi, I am your companion, how can I help you?"}]
+    st.session_state["messages"] = [{"role": "assistant", "content": "你好呀，老友，有冇啲咩需要幫手吖？👋🏻"}]
     st.session_state.chat_history = None
 
 st.subheader("Demo App 🦜🔗", divider="rainbow")
 if "messages" not in st.session_state:
-    st.session_state["messages"] = [{"role": "assistant", "content": "Hi, I am your companion, how can I help you?"}]
+    st.session_state["messages"] = [{"role": "assistant", "content": "你好呀，老友，有冇啲咩需要幫手吖？👋🏻"}]
 
 for msg in st.session_state.messages:
     if msg["role"] == "assistant":
