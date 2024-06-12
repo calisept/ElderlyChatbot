@@ -66,7 +66,10 @@ if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "Hi, I am your companion, how can I help you?"}]
 
 for msg in st.session_state.messages:
-    st.chat_message(msg["role"], avatar="assistant_avatar.png").write(msg["content"])
+    if msg["role"] == "assistant":
+        st.chat_message(msg["role"], avatar="assistant_avatar.png").write(msg["content"])
+    else:
+        st.chat_message(msg["role"], avatar="elderly_avatar.png").write(msg["content"])
 
 if prompt := st.chat_input():
 
