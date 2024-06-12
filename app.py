@@ -3,9 +3,6 @@ import vertexai
 from vertexai.generative_models import GenerativeModel, Part
 import vertexai.preview.generative_models as generative_models
 import streamlit as st
-from dotenv import load_dotenv
-import os
-import streamlit as st
 
 
 PROJECT_ID = os.environ.get("GCP_PROJECT")  # Your Google Cloud Project ID
